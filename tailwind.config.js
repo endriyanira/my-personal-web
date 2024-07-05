@@ -1,0 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        syne: ["Syne", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+    },
+    colors: {
+      primaryDarkText: "#E9EBEC",
+      primaryLightText: "#121419",
+      secondaryDarkText: "#979EA5",
+      secondaryHeadingText: "#687282",
+    },
+  },
+  darkMode: "class",
+  plugins: [],
+};
