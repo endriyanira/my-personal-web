@@ -52,7 +52,7 @@ const Skills = () => {
         <h2 className="font-inter text-primaryLightText dark:text-secondaryDarkText text-lg md:text-xl xl:text-[22px] md:leading-7 xl:leading-8 font-light">
           Curious about what I can do? Here’s a quick snapshot of my skills.
         </h2>
-        <div className="skills grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 justify-center">
+        <div className="skills grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-9 justify-center pt-6 md:pt-8">
           {/* skill card */}
           {SkillsList.map((skill) => (
             <SkillCard key={`skillKey-${skill.name}`} skill={skill} />
