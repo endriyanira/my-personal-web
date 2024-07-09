@@ -8,9 +8,15 @@ const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="absolute p-2 rounded bg-gray-200 dark:bg-gray-700 right-0 border-[1px] m-2 z-10"
+      className={`p-2 rounded right-0 border-[1px] border-secondaryDarkText m-2 z-10 fixed ${
+        darkMode ? "bg-primaryLightText" : "bg-[#ffff]"
+      }`}
     >
-      {darkMode ? <IoMoon /> : <IoSunny />}
+      {darkMode ? (
+        <IoMoon className="text-[#264DE4]" />
+      ) : (
+        <IoSunny className="text-[#F0C106]" />
+      )}
     </button>
   );
 };

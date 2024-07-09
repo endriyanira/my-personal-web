@@ -4,6 +4,7 @@ import sealabs from "../assets/images/experiences/sealabs.svg";
 import hci from "../assets/images/experiences/hci.svg";
 import devcamp from "../assets/images/experiences/devcamp.svg";
 import justika from "../assets/images/experiences/justika.svg";
+import ExperienceCard from "../components/ExperienceCard";
 
 interface ExperienceType {
   id: number;
@@ -19,48 +20,48 @@ const ExperiencesList: ExperienceType[] = [
     id: 1,
     company: "Faculty of Computer Science, University of Indonesia",
     role: "Teaching Assistant of Enterprise Application Architecture and Programming",
-    startPeriod: "1/8/2023",
-    endPeriod: "1/1/2024",
+    startPeriod: "Aug 2023",
+    endPeriod: "Jan 2024",
     imgUrl: ui,
   },
   {
     id: 2,
     company: "Sea Labs Indonesia (Shopee)",
     role: "Frontend Engineer Bootcamp Trainee",
-    startPeriod: "1/8/2023",
-    endPeriod: "1/12/2023",
+    startPeriod: "Aug 2023",
+    endPeriod: "Dec 2023",
     imgUrl: sealabs,
   },
   {
     id: 3,
     company: "Home Credit Indonesia",
     role: "Backend Developer Intern",
-    startPeriod: "1/8/2022",
-    endPeriod: "1/12/2022",
+    startPeriod: "Aug 2022",
+    endPeriod: "Dec 2023",
     imgUrl: hci,
   },
   {
     id: 4,
     company: "Faculty of Computer Science, University of Indonesia",
     role: "Teaching Assistant of Enterprise Application Architecture and Programming",
-    startPeriod: "1/9/2022",
-    endPeriod: "1/1/2023",
+    startPeriod: "Sept 2022",
+    endPeriod: "Jan 2023",
     imgUrl: ui,
   },
   {
     id: 5,
     company: "Tokopedia Devcamp 2023",
     role: "Web Platform Frontend Trainee",
-    startPeriod: "1/10/2022",
-    endPeriod: "1/10/2022",
+    startPeriod: "Oct 2022",
+    endPeriod: "Oct 2022",
     imgUrl: devcamp,
   },
   {
     id: 6,
     company: "Justika",
     role: "Frontend Developer Intern",
-    startPeriod: "1/1/2022",
-    endPeriod: "1/6/2022",
+    startPeriod: "Jan 2022",
+    endPeriod: "Jun 2022",
     imgUrl: justika,
   },
 ];
@@ -76,27 +77,15 @@ const Experience = () => {
           experience<span className="text-secondaryHeadingText">.</span>
         </h1>
         <div className="experiences grid grid-cols-1 gap-5 justify-center pt-6 md:pt-8">
-          {ExperiencesList.map((experience) => (
+          {ExperiencesList.map((experience, i) => (
             <div
               key={`ExpKey${experience.id.toString()}`}
-              className="experience-card flex flex-row gap-4 justify-start items-start relative bg-experienceCardBg p-3 rounded-xl"
+              className="relative mb-4 pb-3"
             >
-              <img
-                src={experience.imgUrl}
-                alt="universitas-indonesia"
-                className="items-start"
-              />
-              <div className="experience-detail flex flex-col gap-3 justify-start items-start relative font-inter">
-                <h4 className="experience-company  text-lg font-semibold text-primaryLightText dark:text-primaryDarkText">
-                  {experience.company}
-                </h4>
-                <h6 className="experience-rol text-base text-secondaryDarkText">
-                  {experience.role}
-                </h6>
-                <p className="experience-period text-secondaryDarkText text-wrap">
-                  Aug 2023 - Jan 2024
-                </p>
-              </div>
+              <ExperienceCard experience={experience} />
+              {/* {i !== ExperiencesList.length - 1 && (
+                <div className="border-r-2 h-8 t-0 absolute left-[50%]"></div>
+              )} */}
             </div>
           ))}
         </div>

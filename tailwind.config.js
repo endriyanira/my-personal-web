@@ -14,6 +14,8 @@ module.exports = {
       secondaryDarkText: "#979EA5",
       secondaryHeadingText: "#687282",
       experienceCardBg: "#2B3240",
+      experienceCardLightBg: "#727173",
+      experienceCardLightDetail: "#D9D9D9",
     },
   },
   darkMode: "class",

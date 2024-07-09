@@ -12,10 +12,7 @@ interface SkillCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
-    <div
-      key={`skillKey-${skill.name}`}
-      className="skill-card flex flex-col gap-3 justify-center items-center"
-    >
+    <div className="skill-card flex flex-col gap-3 justify-center items-center">
       <img className="items-center" src={skill.urlImg} alt={skill.name} />
       <p className="text-center justify-center items-center text-secondaryHeadingText">
         {skill.name}
