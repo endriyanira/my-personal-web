@@ -13,6 +13,7 @@ module.exports = {
       primaryLightText: "#121419",
       secondaryDarkText: "#979EA5",
       secondaryHeadingText: "#687282",
+      experienceCardBg: "#2B3240",
     },
   },
   darkMode: "class",
